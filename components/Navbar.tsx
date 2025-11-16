@@ -1,49 +1,122 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import Image from 'next/image';
+import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
+  const navRefs = useRef<(HTMLAnchorElement | null)[]>([]);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Add hysteresis to prevent rapid toggling
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 50) {
+        setIsScrolled(true);
+      } else if (scrollPosition < 30) {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    // Update underline position when pathname or hover changes
+    const activeIndex = navLinks.findIndex(link => link.href === pathname);
+    const targetIndex = hoveredIndex !== null ? hoveredIndex : activeIndex;
+
+    if (targetIndex >= 0 && navRefs.current[targetIndex]) {
+      const element = navRefs.current[targetIndex];
+      if (element) {
+        setUnderlineStyle({
+          left: element.offsetLeft,
+          width: element.offsetWidth,
+        });
+      }
+    }
+  }, [pathname, hoveredIndex]);
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
+    { href: '/services', label: 'Services' },
+    { href: '/pricing', label: 'Pricing' },
+    { href: '/about', label: 'About Us' },
+    { href: '/contacts', label: 'Contact' },
   ];
 
   return (
-    <nav className="bg-gray-900 text-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <nav
+      className="sticky top-0 z-50 transition-all duration-300 border-b bg-white"
+      style={{
+        borderColor: '#e5e7eb',
+        boxShadow: isScrolled ? '0 2px 8px rgba(0,0,0,0.05)' : '0 2px 4px rgba(0,0,0,0.02)'
+      }}
+    >
+      <div style={{ maxWidth: '90rem', margin: '0 auto', paddingLeft: '6rem', paddingRight: '4rem' }}>
+        <div className="flex items-center justify-between transition-all duration-300" style={{ height: isScrolled ? '4rem' : '5rem' }}>
           {/* Logo/Brand */}
-          <Link href="/" className="text-2xl font-bold">
-            DigiTrust
+          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-all duration-300">
+            <div className="shrink-0 transition-all duration-300 relative" style={{ width: isScrolled ? '3.5rem' : '4.5rem', height: isScrolled ? '3.5rem' : '4.5rem' }}>
+              <Image
+                src="/logo.png"
+                alt="DigiTrust Logo"
+                fill
+                className="object-contain"
+                style={{ filter: 'invert(1)' }}
+                priority
+              />
+            </div>
+            <span className="font-semibold text-black tracking-tight transition-all duration-300" style={{ fontSize: isScrolled ? '1.4rem' : '1.75rem' }}>DIGITRUST</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {navLinks.map((link) => {
+          <div className="hidden md:flex items-center gap-8 relative">
+            {navLinks.map((link, index) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`hover:text-gray-300 transition-colors ${
-                    isActive ? 'text-white border-b-2 border-white' : 'text-gray-400'
+                  ref={(el) => { navRefs.current[index] = el; }}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                  className={`relative transition-all duration-200 ${
+                    isActive ? 'text-black font-medium' : 'text-gray-600'
                   }`}
+                  style={{
+                    fontSize: isScrolled ? '0.85rem' : '0.875rem',
+                    paddingBottom: '0.5rem'
+                  }}
                 >
-                  {link.label}
+                  <span className="inline-block transition-all duration-200 hover:scale-110 hover:text-black">
+                    {link.label}
+                  </span>
                 </Link>
               );
             })}
+            {/* Sliding underline */}
+            <span
+              className="absolute bottom-0 bg-black transition-all duration-500 ease-in-out"
+              style={{
+                left: `${underlineStyle.left}px`,
+                width: `${underlineStyle.width}px`,
+                height: '1.5px',
+              }}
+            />
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-2xl"
+            className="md:hidden text-2xl text-black"
           >
             {isMobileMenuOpen ? '✕' : '☰'}
           </button>
@@ -57,7 +130,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-300 hover:text-white transition-colors py-2"
+                  className="text-gray-700 hover:text-black transition-colors py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}

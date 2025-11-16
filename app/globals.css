@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 * {
   box-sizing: border-box;
@@ -8,9 +6,19 @@
   margin: 0;
 }
 
+html {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
 body {
   color: #1f2937;
   background: #ffffff;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -20,4 +28,8 @@ a {
 
 a:visited {
   color: inherit;
+}
+
+button {
+  font-family: inherit;
 }

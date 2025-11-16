@@ -2,12 +2,17 @@
   "name": "digitrust",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next dev -p 9000",
+    "dev": "next dev -p 6900",
     "build": "next build",
-    "start": "next start -p 9000",
+    "start": "next start -p 6900",
     "lint": "next lint"
   },
-  "keywords": ["digitrust", "template", "nextjs", "tailwind"],
+  "keywords": [
+    "digitrust",
+    "template",
+    "nextjs",
+    "tailwind"
+  ],
   "author": "DigiTrust",
   "license": "ISC",
   "description": "DigiTrust - A simple, expandable Next.js template",
