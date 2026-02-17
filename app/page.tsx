@@ -9,12 +9,12 @@ export default function Home() {
           <div className="text-left">
             {/* Main Headline */}
             <h1 className="font-bold text-gray-900" style={{ fontSize: '3.75rem', lineHeight: '1.1', marginBottom: '2rem', maxWidth: '58rem' }}>
-              Security and Web Engineering for the Modern Startup
+              AI Security for the Modern Enterprise
             </h1>
 
             {/* Subheadline */}
             <p className="text-gray-500 leading-relaxed" style={{ fontSize: '1.25rem', marginBottom: '2.5rem', maxWidth: '90%' }}>
-              We have a different approach. Security in your business should not be an option and it's not complicated.
+              We have a different approach. Securing your AI systems should not be an afterthought and it's not complicated.
             </p>
 
             {/* CTA Buttons */}
@@ -26,7 +26,7 @@ export default function Home() {
               </Link>
               <Link href="/contacts?subject=Free Assessment">
                 <button className="bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium transition-colors" style={{ padding: '1rem 2rem', borderRadius: '0.15rem', fontSize: '1rem' }}>
-                  Free Assesment
+                  Free Assessment
                 </button>
               </Link>
             </div>
@@ -45,11 +45,11 @@ export default function Home() {
               </svg>
               <span className="text-base font-medium text-gray-400">OpenZature</span>
             </div>
-            <span className="text-base font-semibold text-gray-400">netlify</span>
-            <span className="text-base font-bold text-gray-400">vercel</span>
+            <span className="text-base font-semibold text-gray-400">OWASP</span>
+            <span className="text-base font-bold text-gray-400">NIST</span>
             <div className="flex items-center gap-2">
               <div className="w-6 h-6 bg-gray-400 rounded"></div>
-              <span className="text-base font-semibold text-gray-400">Ager</span>
+              <span className="text-base font-semibold text-gray-400">MITRE</span>
             </div>
           </div>
         </div>
@@ -65,13 +65,13 @@ export default function Home() {
                 Why ExfilGuard
               </h2>
               <p className="text-gray-600 leading-relaxed" style={{ fontSize: '1rem' }}>
-                We combine enterprise-grade security with professional web development. From basic setups to full compliance solutions, we protect and build what matters most to your business.
+                We specialize in securing AI systems against emerging threats. From model protection to data pipeline security, we safeguard what matters most to your business.
               </p>
             </div>
 
             {/* Right Column - Cards */}
             <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Security First Card */}
+              {/* AI Threat Protection Card */}
               <div className="flex flex-col">
                 <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center" style={{ height: '220px', marginBottom: '2rem' }}>
                   <svg className="w-12 h-12 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,14 +79,14 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="font-semibold text-gray-900" style={{ fontSize: '1.35rem', marginBottom: '0.75rem' }}>
-                  Security First
+                  AI Threat Protection
                 </h3>
                 <p className="text-gray-500 text-sm">
-                  Enterprise-grade protection for your digital assets
+                  Enterprise-grade defense against prompt injection, data exfiltration, and model manipulation
                 </p>
               </div>
 
-              {/* Customized Web Development Card */}
+              {/* AI Compliance & Governance Card */}
               <div className="flex flex-col">
                 <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center" style={{ height: '220px', marginBottom: '2rem' }}>
                   <svg className="w-12 h-12 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,10 +94,10 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="font-semibold text-gray-900" style={{ fontSize: '1.35rem', marginBottom: '0.75rem' }}>
-                  Customized Web Development
+                  AI Compliance & Governance
                 </h3>
                 <p className="text-gray-500 text-sm">
-                  Complete web development with built-in security
+                  Ensure your AI systems meet regulatory standards and industry best practices
                 </p>
               </div>
             </div>
@@ -125,14 +125,14 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Web Development Preview */}
+            {/* AI Model Security */}
             <Link href="/services" className="group">
               <div className="bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow cursor-pointer h-full" style={{ padding: '2rem' }}>
                 <h3 className="font-bold text-gray-900 mb-4" style={{ fontSize: '1.5rem' }}>
-                  Web Development
+                  AI Model Security
                 </h3>
                 <p className="text-gray-500 mb-6" style={{ fontSize: '0.9rem' }}>
-                  Professional websites and web applications built for modern businesses. From simple landing pages to complex e-commerce platforms.
+                  Protect your AI models from adversarial attacks, prompt injection, data poisoning, and unauthorized access.
                 </p>
                 <div className="flex items-center text-gray-600 text-sm group-hover:text-black transition-colors">
                   <span>Learn more</span>
@@ -143,14 +143,14 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Security Services Preview */}
+            {/* AI Risk Assessment */}
             <Link href="/services" className="group">
               <div className="bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow cursor-pointer h-full" style={{ padding: '2rem' }}>
                 <h3 className="font-bold text-gray-900 mb-4" style={{ fontSize: '1.5rem' }}>
-                  Security Services
+                  AI Risk Assessment
                 </h3>
                 <p className="text-gray-500 mb-6" style={{ fontSize: '0.9rem' }}>
-                  Enterprise-grade security solutions including assessments, penetration testing, compliance services, and ongoing monitoring.
+                  Comprehensive security audits for your AI infrastructure, including LLM deployments, data pipelines, and integration points.
                 </p>
                 <div className="flex items-center text-gray-600 text-sm group-hover:text-black transition-colors">
                   <span>Learn more</span>
@@ -161,14 +161,14 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Complete Bundles Preview */}
+            {/* AI Monitoring & Response */}
             <Link href="/services" className="group">
               <div className="bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow cursor-pointer h-full" style={{ padding: '2rem' }}>
                 <h3 className="font-bold text-gray-900 mb-4" style={{ fontSize: '1.5rem' }}>
-                  Complete Bundles
+                  AI Monitoring & Response
                 </h3>
                 <p className="text-gray-500 mb-6" style={{ fontSize: '0.9rem' }}>
-                  Web development and security combined in packages designed for startups. Essentials, Professional, and Enterprise tiers available.
+                  Real-time monitoring of your AI systems for anomalous behavior, data leakage, and security incidents with 24/7 response.
                 </p>
                 <div className="flex items-center text-gray-600 text-sm group-hover:text-black transition-colors">
                   <span>Learn more</span>
@@ -186,15 +186,15 @@ export default function Home() {
       <section className="bg-white border-t border-gray-200">
         <div style={{ maxWidth: '90rem', margin: '0 auto', paddingLeft: '6rem', paddingRight: '4rem', paddingTop: '6rem', paddingBottom: '6rem' }}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Ready to scale */}
+            {/* Ready to secure */}
             <div className="bg-white border border-gray-200 rounded-lg" style={{ padding: '2.5rem' }}>
               <h2 className="font-bold text-gray-900 leading-tight" style={{ fontSize: '2rem', marginBottom: '2rem' }}>
-                Ready to scale with
+                Ready to secure your
                 <br />
-                confidence?
+                AI systems?
               </h2>
               <button className="bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium transition-colors" style={{ padding: '0.75rem 1.5rem', borderRadius: '0.15rem', fontSize: '0.9rem' }}>
-                Event and conferences
+                Events and conferences
               </button>
             </div>
 

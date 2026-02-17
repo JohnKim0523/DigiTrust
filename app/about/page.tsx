@@ -19,7 +19,7 @@ export default function About() {
 
             {/* Description */}
             <p className="text-gray-500 mb-8 max-w-2xl mx-auto text-center" style={{ fontSize: '1.1rem' }}>
-              We're currently working on our About Us page. Check back soon to learn more about ExfilGuard and our mission to provide secure, reliable solutions for modern startups.
+              We're currently working on our About Us page. Check back soon to learn more about ExfilGuard and our mission to deliver enterprise-grade AI security solutions.
             </p>
 
             {/* Action Buttons */}
@@ -53,7 +53,7 @@ export default function About() {
                   View Our Services
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Explore our web development and security offerings
+                  Explore our AI security offerings
                 </p>
               </div>
             </a>
@@ -75,7 +75,7 @@ export default function About() {
                   Get in Touch
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Let's discuss your project requirements
+                  Let's discuss your security requirements
                 </p>
               </div>
             </a>

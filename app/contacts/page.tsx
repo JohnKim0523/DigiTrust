@@ -50,7 +50,7 @@ function ContactForm() {
             Contact Us
           </h1>
           <p className="text-gray-500 text-sm sm:text-base md:text-lg">
-            Have questions? Need an assessment? Let's discuss how we can help secure and build your digital presence.
+            Have questions? Need an assessment? Let's discuss how we can help secure your AI systems.
           </p>
         </div>
       </section>
