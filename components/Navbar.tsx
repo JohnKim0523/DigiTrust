@@ -67,14 +67,14 @@ export default function Navbar() {
             <div className="shrink-0 transition-all duration-300 relative" style={{ width: isScrolled ? '3.5rem' : '4.5rem', height: isScrolled ? '3.5rem' : '4.5rem' }}>
               <Image
                 src="/logo.png"
-                alt="DigiTrust Logo"
+                alt="ExfilGuard Logo"
                 fill
                 className="object-contain"
                 style={{ filter: 'invert(1)' }}
                 priority
               />
             </div>
-            <span className="font-semibold text-black tracking-tight transition-all duration-300" style={{ fontSize: isScrolled ? '1.4rem' : '1.75rem' }}>DIGITRUST</span>
+            <span className="font-semibold text-black tracking-tight transition-all duration-300" style={{ fontSize: isScrolled ? '1.4rem' : '1.75rem' }}>EXFILGUARD</span>
           </Link>
 
           {/* Desktop Navigation */}

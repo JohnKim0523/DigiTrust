@@ -1,5 +1,5 @@
 {
-  "name": "digitrust",
+  "name": "exfilguard",
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev -p 6900",
@@ -8,14 +8,14 @@
     "lint": "next lint"
   },
   "keywords": [
-    "digitrust",
+    "exfilguard",
     "template",
     "nextjs",
     "tailwind"
   ],
-  "author": "DigiTrust",
+  "author": "ExfilGuard",
   "license": "ISC",
-  "description": "DigiTrust - A simple, expandable Next.js template",
+  "description": "ExfilGuard - A simple, expandable Next.js template",
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^24.10.1",

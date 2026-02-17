@@ -7,8 +7,8 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "DigiTrust",
-  description: "Welcome to DigiTrust",
+  title: "ExfilGuard",
+  description: "Welcome to ExfilGuard",
 };
 
 export default function RootLayout({

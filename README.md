@@ -30,7 +30,7 @@ npm run dev
 ### Project Structure
 
 ```
-digitrust/
+exfilguard/
 ├── app/
 │   ├── about/          # About page
 │   ├── globals.css     # Global styles
@@ -151,7 +151,7 @@ The template uses Tailwind CSS 4. You can:
 ### Content
 
 - Update text content in page files
-- Replace the DigiTrust branding with your own
+- Replace the ExfilGuard branding with your own
 - Add your logo and images to the `public/` directory
 - Customize the Navbar and Footer components
 

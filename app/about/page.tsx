@@ -19,7 +19,7 @@ export default function About() {
 
             {/* Description */}
             <p className="text-gray-500 mb-8 max-w-2xl mx-auto text-center" style={{ fontSize: '1.1rem' }}>
-              We're currently working on our About Us page. Check back soon to learn more about DigiTrust and our mission to provide secure, reliable solutions for modern startups.
+              We're currently working on our About Us page. Check back soon to learn more about ExfilGuard and our mission to provide secure, reliable solutions for modern startups.
             </p>
 
             {/* Action Buttons */}

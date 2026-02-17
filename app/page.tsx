@@ -55,14 +55,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why DigiTrust Section */}
+      {/* Why ExfilGuard Section */}
       <section className="bg-white border-t border-gray-200">
         <div style={{ maxWidth: '90rem', margin: '0 auto', paddingLeft: '6rem', paddingRight: '4rem', paddingTop: '6rem', paddingBottom: '6rem' }}>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             {/* Left Column - Description */}
             <div className="lg:col-span-1 flex flex-col justify-center">
               <h2 className="font-bold text-gray-900 mb-4" style={{ fontSize: '2.5rem' }}>
-                Why DigiTrust
+                Why ExfilGuard
               </h2>
               <p className="text-gray-600 leading-relaxed" style={{ fontSize: '1rem' }}>
                 We combine enterprise-grade security with professional web development. From basic setups to full compliance solutions, we protect and build what matters most to your business.

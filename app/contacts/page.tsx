@@ -154,7 +154,7 @@ function ContactForm() {
                   Email
                 </label>
                 <div className="bg-gray-50 border border-gray-200 rounded-md text-gray-700" style={{ fontSize: '1.05rem', padding: '0.65rem 1.25rem' }}>
-                  contact@digitrust.com
+                  contact@exfilguard.com
                 </div>
               </div>
 
@@ -164,7 +164,7 @@ function ContactForm() {
                   Company Name
                 </label>
                 <div className="bg-gray-50 border border-gray-200 rounded-md text-gray-700" style={{ fontSize: '1.05rem', padding: '0.65rem 1.25rem' }}>
-                  DigiTrust
+                  ExfilGuard
                 </div>
               </div>
 
